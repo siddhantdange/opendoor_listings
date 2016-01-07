@@ -1,11 +1,15 @@
 
-Link:
+#Opendoor API Problem
+
+## Prod:
 
 https://damp-fortress-7437.herokuapp.com/listings
 
+## Usage:
+
 API:
 
-*GET* /listings?min_price=100000&max_price=200000&min_bed=2&max_bed=2&min_bath=2&max_bath=2
+**GET** /listings?min_price=100000&max_price=200000&min_bed=2&max_bed=2&min_bath=2&max_bath=2
 
 
 Parameters:
@@ -17,6 +21,9 @@ Parameters:
 - max_bed: The maximum number of bedrooms.
 - min_bath: The minimum number of bathrooms.
 - max_bath: The maximum number of bathrooms.
+- count (optional, default=50): maximum number of items to display
+- page (optional, default=1): page offset with relation to **count**
+
 
 
 The expected response is a GeoJSON FeatureCollection of listings:
@@ -39,4 +46,6 @@ The expected response is a GeoJSON FeatureCollection of listings:
   ]
 }
 ```
+
+The next and last links of the paged results will be found in the **Link** field in the HTTP Response Header
 
