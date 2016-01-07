@@ -6,7 +6,6 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from ODApp.Models import Listing
 from ODApp.Routes.Routes import Routes
 
 
